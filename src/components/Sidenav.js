@@ -8,7 +8,6 @@ import Drawer from "@material-ui/core/Drawer";
 import Divider from "@material-ui/core/Divider";
 import CssBaseline from "@material-ui/core/CssBaseline";
 import AppBar from "@material-ui/core/AppBar";
-import Toolbar from "@material-ui/core/Toolbar";
 import List from "@material-ui/core/List";
 import IconButton from "@material-ui/core/IconButton";
 import ChevronLeftIcon from "@material-ui/icons/ChevronLeft";
@@ -66,10 +65,10 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: "flex-end",
   },
   content: {
-    paddingLeft:24,
-    paddingRight:24,
-    paddingBottom:10,
-    paddingTop:20,
+    paddingLeft: 24,
+    paddingRight: 24,
+    paddingBottom: 10,
+    paddingTop: 20,
     backgroundColor: "white",
     borderRadius: 90,
     maxWidth: 75,
@@ -117,13 +116,10 @@ const useStyles = makeStyles((theme) => ({
     paddingLeft: 10,
     fontWeight: "bold",
   },
-  collapsetxt:{
-    fontSize:14,
-    color:'black',
+  collapsetxt: {
+    fontSize: 14,
+    color: "black",
   },
-  lefticon:{
-    // paddingLeft:10,
-  }
 }));
 
 export default function PersistentDrawerLeft() {
@@ -147,8 +143,7 @@ export default function PersistentDrawerLeft() {
         className={clsx(classes.appBar, {
           [classes.appBarShift]: open,
         })}
-      >
-      </AppBar>
+      ></AppBar>
       <Drawer
         className={classes.drawer}
         variant="persistent"
@@ -170,15 +165,12 @@ export default function PersistentDrawerLeft() {
           <Medialibrary />
         </List>
         <div className={classes.drawerHeader}>
-           
           <IconButton onClick={handleDrawerClose}>
-          
             {theme.direction === "ltr" ? (
               <ChevronLeftIcon />
             ) : (
               <ChevronRightIcon />
             )}
-            {/* <ChevronLeftIcon  className={classes.lefticon}/> <p className={classes.collapsetxt}>Collapse </p> */}
           </IconButton>
           <p>Collapse</p>
         </div>
@@ -238,9 +230,7 @@ export default function PersistentDrawerLeft() {
             className={clsx(classes.menuButton, open && classes.hide)}
           />
         </Typography>
-        
       </main>
     </div>
-    
   );
 }

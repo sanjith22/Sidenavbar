@@ -12,7 +12,7 @@ import ToysOutlinedIcon from "@material-ui/icons/Toys";
 import TrackChangesOutlinedIcon from "@material-ui/icons/TrackChanges";
 import TrafficOutlinedIcon from "@material-ui/icons/Traffic";
 import SearchIcon from "@material-ui/icons/Search";
-import ArrowDropDownIcon from '@material-ui/icons/ArrowDropDown';
+import ArrowDropDownIcon from "@material-ui/icons/ArrowDropDown";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -38,15 +38,15 @@ const useStyles = makeStyles((theme) => ({
   headtext: {
     paddingLeft: 10,
     fontSize: 12,
-    color:'grey'
+    color: "grey",
   },
   webicons: {
     fontSize: 17,
-    color:'grey',
+    color: "grey",
   },
   imges: {
     width: 200,
-    
+
     "& > *": {
       margin: theme.spacing(1),
     },
@@ -60,23 +60,23 @@ const useStyles = makeStyles((theme) => ({
     borderRadius: 0,
   },
   search: {
-    color:'grey',
+    color: "grey",
     fontSize: 16,
     justifyContent: "flex-end",
     textAlign: "right!important",
     marginLeft: 100,
   },
-  icon:{
-   color:'grey',
-   fontSize:20 
+  icon: {
+    color: "grey",
+    fontSize: 20,
   },
-  arrowdown:{
-    color:'grey',
-    marginTop:-5,
+  arrowdown: {
+    color: "grey",
+    marginTop: -5,
   },
-  expmore:{
-    display:'none'
-  }
+  expmore: {
+    display: "none",
+  },
 }));
 
 export default function Icon() {
@@ -92,8 +92,8 @@ export default function Icon() {
           id="panel1a-header"
         >
           <Typography className={classes.heading}>
-            <ArrowDropDownIcon className={classes.arrowdown}/> 
-             <WebIcon className={classes.webicons} />
+            <ArrowDropDownIcon className={classes.arrowdown} />
+            <WebIcon className={classes.webicons} />
             <span className={classes.headtext}>ICON</span>
             <SearchIcon className={classes.search} />
           </Typography>
@@ -102,7 +102,7 @@ export default function Icon() {
         <AccordionDetails className={classes.textwidth}>
           <Typography className={classes.textwidth}>
             <div className={classes.imges}>
-              <TouchAppOutlinedIcon  className={classes.icon}/>
+              <TouchAppOutlinedIcon className={classes.icon} />
               <ToysOutlinedIcon className={classes.icon} />
               <TrackChangesOutlinedIcon className={classes.icon} />
               <TrafficOutlinedIcon className={classes.icon} />
