@@ -56,8 +56,8 @@ const useStyles = makeStyles((theme) => ({
   },
   drawerHeader: {
     position: "fixed",
-    bottom: 15,
-    left: 50,
+    bottom: 10,
+    left: 20,
     display: "flex",
     alignItems: "center",
     padding: theme.spacing(0, 1),
@@ -66,6 +66,10 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: "flex-end",
   },
   content: {
+    paddingLeft:24,
+    paddingRight:24,
+    paddingBottom:10,
+    paddingTop:20,
     backgroundColor: "white",
     borderRadius: 90,
     maxWidth: 75,
@@ -107,13 +111,19 @@ const useStyles = makeStyles((theme) => ({
     marginBottom: 10,
   },
   parafirst: {
-    marginTop: 50,
     marginBottom: 10,
   },
   librarytxt: {
     paddingLeft: 10,
     fontWeight: "bold",
   },
+  collapsetxt:{
+    fontSize:14,
+    color:'black',
+  },
+  lefticon:{
+    // paddingLeft:10,
+  }
 }));
 
 export default function PersistentDrawerLeft() {
@@ -138,16 +148,6 @@ export default function PersistentDrawerLeft() {
           [classes.appBarShift]: open,
         })}
       >
-        <Toolbar className={classes.toolhead}>
-          <IconButton
-            aria-label="open drawer"
-            onClick={handleDrawerOpen}
-            edge="start"
-            className={clsx(classes.menuButton, open && classes.hide)}
-          >
-            <DoubleArrowIcon />
-          </IconButton>
-        </Toolbar>
       </AppBar>
       <Drawer
         className={classes.drawer}
@@ -170,14 +170,17 @@ export default function PersistentDrawerLeft() {
           <Medialibrary />
         </List>
         <div className={classes.drawerHeader}>
-          <p>Collapse</p>
+           
           <IconButton onClick={handleDrawerClose}>
+          
             {theme.direction === "ltr" ? (
               <ChevronLeftIcon />
             ) : (
               <ChevronRightIcon />
             )}
+            {/* <ChevronLeftIcon  className={classes.lefticon}/> <p className={classes.collapsetxt}>Collapse </p> */}
           </IconButton>
+          <p>Collapse</p>
         </div>
       </Drawer>
 
@@ -222,7 +225,22 @@ export default function PersistentDrawerLeft() {
             className={clsx(classes.menuButton, open && classes.hide)}
           />
         </Typography>
+        <Divider
+          className={classes.divide}
+          className={clsx(classes.menuButton, open && classes.hide)}
+        />
+        <Typography paragraph className={classes.para}>
+          <DoubleArrowIcon
+            cursor="pointer"
+            aria-label="open drawer"
+            onClick={handleDrawerOpen}
+            edge="start"
+            className={clsx(classes.menuButton, open && classes.hide)}
+          />
+        </Typography>
+        
       </main>
     </div>
+    
   );
 }

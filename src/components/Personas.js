@@ -9,6 +9,7 @@ import Avatar from "@material-ui/core/Avatar";
 import WebIcon from "@material-ui/icons/Web";
 import Divider from "@material-ui/core/Divider";
 import AddOutlinedIcon from "@material-ui/icons/AddOutlined";
+import ArrowDropDownIcon from '@material-ui/icons/ArrowDropDown';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -23,10 +24,12 @@ const useStyles = makeStyles((theme) => ({
   },
   headtext: {
     paddingLeft: 10,
-    fontSize: 14,
+    fontSize: 12,
+    color:'grey',
   },
   webicons: {
-    fontSize: 20,
+    fontSize: 17,
+    color:'grey',
   },
   imges: {
     width: 200,
@@ -43,11 +46,19 @@ const useStyles = makeStyles((theme) => ({
     display: "inline-flex",
   },
   add: {
+    color:'#fa43df',
     fontSize: 16,
     justifyContent: "right!important",
     textAlign: "right!important",
-    marginLeft: 45,
+    marginLeft: 61,
   },
+  arrowdown:{
+    color:'grey',
+    marginTop:-5,
+  },
+  expmore:{
+    display:'none'
+  }
 }));
 
 export default function Personas() {
@@ -57,11 +68,12 @@ export default function Personas() {
     <div className={classes.root}>
       <Accordion className={classes.head}>
         <AccordionSummary
-          expandIcon={<ExpandMoreIcon />}
+          expandIcon={<ExpandMoreIcon className={classes.expmore} />}
           aria-controls="panel1a-content"
           id="panel1a-header"
         >
           <Typography className={classes.heading}>
+          <ArrowDropDownIcon className={classes.arrowdown}/> 
             <WebIcon className={classes.webicons} />
             <span className={classes.headtext}>PERSONAS</span>
             <AddOutlinedIcon className={classes.add} />
